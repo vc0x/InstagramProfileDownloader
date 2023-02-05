@@ -19,6 +19,7 @@ Each profile can contain the following directories based on its contents:
 
 ### Chrome
 For Chromium based browsers, the files are not zipped and written directly to **Instagram** folder.
+
 Example: The profile [itskaslol](https://www.instagram.com/itskaslol) will be downloaded to:
 
 **Default Browser Download Folder**/Instagram/itskaslol

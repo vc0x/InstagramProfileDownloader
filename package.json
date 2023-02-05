@@ -1,0 +1,26 @@
+{
+  "name": "instagram-downloader",
+  "version": "1.0.0",
+  "description": "Downloads Instagram profiles.",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "concurrently \"chokidar build.js ./src/* -c 'node build.js'\" \"node server.js\"",
+    "format": "prettier ./src --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backwards221/InstagramProfileDownloader.git"
+  },
+  "author": "backwards221",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/backwards221/InstagramProfileDownloader/issues"
+  },
+  "homepage": "https://github.com/backwards221/InstagramProfileDownloader#readme",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.5.0",
+    "express": "^4.18.2",
+    "prettier": "^2.7.1"
+  }
+}

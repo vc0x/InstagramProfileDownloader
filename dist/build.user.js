@@ -231,7 +231,7 @@ const ui = {
 };
 document.addEventListener('DOMContentLoaded', async () => {
   const headerSelector =
-    'div[id^="mount_"] > div > div > div > div > div > div > div > div > div >  div > section > main > div > header > section > div';
+    'div[id^="mount_"] > div > div > div > div > div > div > div > div > div > section > main > div > header > section > div';
 
   let header = document.querySelector(headerSelector);
 

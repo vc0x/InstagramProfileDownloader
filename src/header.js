@@ -1,10 +1,10 @@
 // noinspection SpellCheckingInspection,JSUnresolvedVariable,JSUnresolvedFunction,TypeScriptUMDGlobal,JSUnusedGlobalSymbols
 // ==UserScript==
 // @name InstagramProfileDownloader
-// @namespace https://github.com/backwards221
-// @author backwards221
+// @namespace https://github.com/azzlover
+// @author azzlover
 // @description Downloads Instagram profiles
-// @version 1.0.0
+// @version 1.0.1
 // @updateURL https://github.com/backwards221/InstagramProfileDownloader/raw/main/dist/build.user.js
 // @downloadURL https://github.com/backwards221/InstagramProfileDownloader/raw/main/dist/build.user.js
 // @icon https://www.google.com/s2/favicons?sz=64&domain=instagram.com

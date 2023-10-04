@@ -1,10 +1,10 @@
 // noinspection SpellCheckingInspection,JSUnresolvedVariable,JSUnresolvedFunction,TypeScriptUMDGlobal,JSUnusedGlobalSymbols
 // ==UserScript==
 // @name InstagramProfileDownloader
-// @namespace https://github.com/backwards221
-// @author backwards221
+// @namespace https://github.com/azzlover
+// @author azzlover
 // @description Downloads Instagram profiles
-// @version 1.0.0
+// @version 1.0.1
 // @updateURL https://github.com/backwards221/InstagramProfileDownloader/raw/main/dist/build.user.js
 // @downloadURL https://github.com/backwards221/InstagramProfileDownloader/raw/main/dist/build.user.js
 // @icon https://www.google.com/s2/favicons?sz=64&domain=instagram.com
@@ -231,7 +231,7 @@ const ui = {
 };
 document.addEventListener('DOMContentLoaded', async () => {
   const headerSelector =
-    'div[id^="mount_"] > div > div > div > div > div > div > div > div > div > section > main > div > header > section > div';
+    'div[id^="mount_"] > div > div > div > div > div > div > div > div > div > div > section > main > div > header > section > div';
 
   let header = document.querySelector(headerSelector);
 
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const id = location.href
     .replace(/(\/)?\?.*/, '')
     .split('/')
-    .filter((s) => s.trim() !== '')
+    .filter(s => s.trim() !== '')
     .reverse()[0];
 
   const headers = { 'User-Agent': 'Instagram 219.0.0.12.117 Android' };
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const after = document.querySelector(`${headerSelector} > div > div > div`);
 
   const btnClass =
-    'x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli xexx8yu x18d9i69 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz x6s0dn4 xjyslct x1lq5wgf xgqcy7u x30kzoy x9jhf4c x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye xwhw2v2 x10w6t97 xl56j7k x17ydfre x1f6kntn x1swvt13 x1pi30zi x2b8uid xlyipyv x87ps6o x14atkfc x1n2onr6 x1d5wrs8 x1gjpkn9 x175jnsf xsz8vos';
+    'x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x972fbf xcfux6l x1qhh985 xm0m39n xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli xexx8yu x18d9i69 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x1lku1pv x1a2a7pz x6s0dn4 xjyslct x1lq5wgf xgqcy7u x30kzoy x9jhf4c x1ejq31n xd10rxx x1sy0etr x17r0tee x9f619 x1ypdohk x78zum5 x1i0vuye x1f6kntn xwhw2v2 x10w6t97 xl56j7k x17ydfre x1swvt13 x1pi30zi x1n2onr6 x2b8uid xlyipyv x87ps6o x14atkfc xcdnw81 x1gjpkn9 x5n08af xsz8vos';
 
   const btnDownload = document.createElement('div');
   btnDownload.href = '#';
@@ -426,10 +426,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       h.ui.setElProps(statusLabel, { color: '#902d2d' });
       if (successfullyCompleted > 0) {
-        h.ui.setText(
-          statusLabel,
-          `🢒 Profile downloaded partially: ${resolved.length - successfullyCompleted} / ${resolved.length} downloaded successfully`,
-        );
+        h.ui.setText(statusLabel, `🢒 Profile downloaded partially: ${successfullyCompleted} / ${resolved.length} downloaded successfully`);
       } else {
         h.ui.setText(statusLabel, `🢒 Couldn't download any post!`);
       }
